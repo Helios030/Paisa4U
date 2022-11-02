@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.face.paisa_FaceActivityPaisa">
+
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_common" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:drawableTop="@mipmap/paisa_img_face"
+            android:drawablePadding="70dp"
+            android:gravity="center"
+            android:text="@string/paisa_str_face_tip"
+            android:textSize="20dp"
+
+
+            />
+
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="320dp"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="80dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/paisa_next"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.pay.repayment.paisa_RepaymentActivityPaisa">
+
+    <include layout="@layout/toolbar_common"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/repay_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@color/white"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="6dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                
+                    
+                    <com.paisa.four_u.ui.view.item.paisa_ItemViewShow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:tv_text="@string/paisa_info_sure"
+                    />
+
+                    <com.paisa.four_u.ui.view.item.paisa_ItemViewShowLine
+                        android:id="@+id/ivsl_order_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        app:title_text="@string/paisa_order_number"
+                        />
+
+                    <com.paisa.four_u.ui.view.item.paisa_ItemViewShowLine
+                        android:id="@+id/ivsl_repayment_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:title_text="@string/paisa_repay_amount"
+                        />
+                    <com.paisa.four_u.ui.view.item.paisa_ItemViewShowLine
+                        android:id="@+id/ivsl_repayment_expiration_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        app:title_text="@string/paisa_repayment_expiration_time"
+                        />
+                    <com.paisa.four_u.ui.view.item.paisa_ItemViewShowLine
+                        android:id="@+id/ivsl_repayment_bank_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        app:title_text="@string/paisa_repayment_bank_name"
+                        />
+                    <com.paisa.four_u.ui.view.item.paisa_ItemViewShowLine
+                        android:id="@+id/ivsl_repayment_bank_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        app:title_text="@string/paisa_repayment_bank_code"
+                        />
+                    <com.paisa.four_u.ui.view.item.paisa_ItemViewShowLine
+                        android:id="@+id/ivsl_receiving_people"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        app:title_text="@string/paisa_receiving_people"
+                        />
+                    <com.paisa.four_u.ui.view.item.paisa_ItemViewShowLine
+                        android:id="@+id/ivsl_receiving_accounte"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        app:title_text="@string/paisa_receiving_account"
+                        />
+                    <com.paisa.four_u.ui.view.item.paisa_ItemViewShowLine
+                        android:id="@+id/ivsl_repayment_information"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        app:title_text="@string/paisa_repayment_information"
+                        />
+
+
+
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@color/white"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/voucher_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/paisa_repayment_voucher"
+                        android:scaleType="fitCenter"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/repay_money_edt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:hint="@string/paisa_please_enter_the_repayment_amount"
+                        android:inputType="number" />
+
+                    <Button
+                        android:id="@+id/repayment_voucher_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/paisa_repayment_voucher"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/repayment_help_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:layout_marginTop="10dp"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/paisa_repayment_guidelines"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14dp"
+                        app:drawableLeftCompat="@mipmap/paisa_icon_sign_query" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/paisa_repayment_callphone"
+                        android:textColor="@color/red_ff" />
+
+                    <TextView
+                        android:id="@+id/customer_service_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/red_ff"
+                        android:textSize="24dp" />
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

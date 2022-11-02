@@ -1,0 +1,168 @@
+import com.paisa.config.Config
+import com.paisa.config.Lib
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdk Config.compileSdk
+
+    defaultConfig {
+        applicationId Config.appId
+        minSdk Config.minSdk
+        targetSdk Config.targetSdk
+        versionCode Config.versionCode
+        versionName Config.versionName
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = "${Config.packAppName}-${variant.productFlavors[1].name}-${variant.buildType.name}-v${defaultConfig.versionName}.apk"
+                outputFileName = fileName
+            }
+        }
+    }
+
+    signingConfigs {
+        loan {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            signingConfig signingConfigs.loan
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            shrinkResources false
+            minifyEnabled false
+            signingConfig signingConfigs.loan
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        flavorDimensions "default", "chanel"
+
+        app {
+            buildConfigField('String', 'CHANNEL', Config.channel)
+            resValue('string', 'app_name', Config.appName)
+            buildConfigField('String', 'APP_NAME', Config.appName)
+            buildConfigField('String', "PRIVACY_POLICY", Config.privacyPolicy)
+            buildConfigField('String', "REPAYMENT_GUIDELINES", Config.repaymentGuidelines)
+            buildConfigField('String', "AREA_CODE", Config.areaCode)
+            resValue('string', 'FACEBOOK_APP_ID', Config.facebookAppId)
+            dimension "default"
+        }
+
+        online {
+            buildConfigField('String', 'BASE_URL', Config.onLineBaseUrl)
+            dimension "chanel"
+        }
+
+        beta {
+            buildConfigField('String', 'BASE_URL', Config.betaBaseUrl)
+            dimension "chanel"
+        }
+
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    namespace 'com.paisa.four_u'
+}
+
+
+dependencies {
+
+    api project(path: ':DFLivenessLibrary')
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'com.google.android.gms:play-services-measurement-api:20.1.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
+    testImplementation Lib.junit
+    androidTestImplementation Lib.junit_ext
+    androidTestImplementation Lib.test_espresso
+    implementation Lib.installreferrer
+    implementation Lib.facebook
+    implementation Lib.work
+    implementation Lib.kotlin
+    implementation Lib.androidxCore
+    implementation Lib.androidxCoreKTX
+    implementation Lib.appcompat
+    implementation Lib.constraintLayout
+    implementation Lib.googleMaterial
+    implementation Lib.lifecycle
+    implementation Lib.viewmodel
+    implementation Lib.livedata
+    implementation Lib.coroutinesCore
+    implementation Lib.coroutinesAndroid
+    implementation Lib.autosize
+    implementation Lib.okhttpLog
+    implementation Lib.retrofit
+    implementation Lib.retrofitGson
+    implementation Lib.gson
+    implementation Lib.glide
+    implementation Lib.glideHttpUnSafe
+    annotationProcessor Lib.glideCompiler
+    implementation Lib.shapeView
+    implementation platform (Lib.firebase_bom )
+    implementation Lib.firebase_ktx
+    implementation Lib.firebase_analytics
+    implementation Lib.firebase_crashlytics
+    implementation Lib.security
+    implementation Lib.avi_library
+    implementation Lib.agentweb
+    implementation Lib.xToast
+    implementation Lib.immersionbar
+    implementation Lib.brvah
+    implementation Lib.permission
+    implementation Lib.picture
+    implementation Lib.bubbleseekbar
+    implementation Lib.animatedbottombar
+    implementation Lib.rootbeer
+    implementation Lib.android_id
+
+}

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_home"
+        android:icon="@mipmap/paisa_icon_home"
+        android:title="@string/paisa_home" />
+    <item
+        android:id="@+id/tab_alarm"
+        android:icon="@mipmap/paisa_icon_user"
+        android:title="@string/paisa_user" />
+
+</menu>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    tools:context=".ui.userData.second.paisa_AdditionalActivityPaisa">
+
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_common" />
+
+    <com.paisa.four_u.ui.view.paisa_ProgressView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:page="first" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewShow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tv_text="@string/paisa_company_information" />
+
+
+
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewInput
+                android:id="@+id/ivi_company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:input_is_number="false"
+                app:input_title_text="@string/paisa_company_name" />
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewInput
+                android:id="@+id/ivi_company_telephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:input_is_number="true"
+                app:input_title_text="@string/paisa_company_telephone" />
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewInput
+                android:id="@+id/ivi_company_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:input_is_number="false"
+                app:input_title_text="@string/paisa_company_address" />
+
+    <com.paisa.four_u.ui.view.item.paisa_ItemViewSelect
+                android:id="@+id/ivs_monthly_salary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:input_is_number="false"
+                app:title_text="@string/paisa_monthly_salary" />
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewInput
+                android:id="@+id/ivi_payday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:input_is_number="false"
+                app:input_title_text="@string/paisa_payday" />
+
+<!--    联系人  1  -->
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewShow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tv_text="@string/paisa_contact_tip1" />
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewSelect
+                android:id="@+id/ivs_contact_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/paisa_contact_relationship"
+                 />
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewInput
+                android:id="@+id/ivi_contact_name_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:input_title_text="@string/paisa_contact_name"
+                 />
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewSelect
+                android:id="@+id/ivs_contact_number_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/paisa_contact_contact_way"
+                 />
+
+
+
+            <!--    联系人  2  -->
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewShow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tv_text="@string/paisa_contact_tip2" />
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewSelect
+                android:id="@+id/ivs_contact_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/paisa_contact_relationship"
+                 />
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewInput
+                android:id="@+id/ivi_contact_name_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                   app:input_title_text="@string/paisa_contact_name"
+                 />
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewSelect
+                android:id="@+id/ivs_contact_number_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/paisa_contact_contact_way"
+                 />
+
+
+            <!--    联系人  3  -->
+
+<!--            <com.paisa.four_u.ui.view.item.ItemViewShow-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:tv_text="@string/contact_tip3" />-->
+
+<!--            <com.paisa.four_u.ui.view.item.ItemViewSelect-->
+<!--                android:id="@+id/ivs_contact_3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:title_text="@string/contact_relationship"-->
+<!--                 />-->
+
+<!--            <com.paisa.four_u.ui.view.item.ItemViewInput-->
+<!--                android:id="@+id/ivi_contact_name_3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                   app:input_title_text="@string/contact_name"-->
+<!--                 />-->
+
+<!--            <com.paisa.four_u.ui.view.item.ItemViewSelect-->
+<!--                android:id="@+id/ivs_contact_number_3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:title_text="@string/contact_contact_way"-->
+<!--                 />-->
+
+
+<!--            &lt;!&ndash;    联系人  4  &ndash;&gt;-->
+
+<!--            <com.paisa.four_u.ui.view.item.ItemViewShow-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:tv_text="@string/contact_tip4" />-->
+
+<!--            <com.paisa.four_u.ui.view.item.ItemViewSelect-->
+<!--                android:id="@+id/ivs_contact_4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:title_text="@string/contact_relationship"-->
+<!--                 />-->
+
+<!--            <com.paisa.four_u.ui.view.item.ItemViewInput-->
+<!--                android:id="@+id/ivi_contact_name_4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                   app:input_title_text="@string/contact_name"-->
+<!--                 />-->
+
+<!--            <com.paisa.four_u.ui.view.item.ItemViewSelect-->
+<!--                android:id="@+id/ivs_contact_number_4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:title_text="@string/contact_contact_way"-->
+<!--                 />-->
+
+            <!--    联系人  5  -->
+
+<!--            <com.rupee.prima.ui.view.item.ItemViewShow-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:tv_text="@string/contact_tip5" />-->
+
+<!--            <com.rupee.prima.ui.view.item.ItemViewSelect-->
+<!--                android:id="@+id/ivs_contact_5"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:title_text="@string/contact_relationship"-->
+<!--                 />-->
+
+<!--            <com.rupee.prima.ui.view.item.ItemViewInput-->
+<!--                android:id="@+id/ivi_contact_name_5"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                   app:input_title_text="@string/contact_name"-->
+<!--                 />-->
+
+<!--            <com.rupee.prima.ui.view.item.ItemViewSelect-->
+<!--                android:id="@+id/ivs_contact_number_5"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:title_text="@string/contact_contact_way"-->
+<!--                 />-->
+
+
+
+
+
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="80dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/paisa_next"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

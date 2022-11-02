@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "747013988687",
+    "project_id": "rupee-lot",
+    "storage_bucket": "rupee-lot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747013988687:android:4d9cc482f83ee14319a53a",
+        "android_client_info": {
+          "package_name": "com.paisa.four_u"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "747013988687-b9lah3lhhi4vd0r7f4mdpj7l1rguul2a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1jzuCEvOwyKAO9OZEUo1cRxf0qpjTc0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "747013988687-b9lah3lhhi4vd0r7f4mdpj7l1rguul2a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

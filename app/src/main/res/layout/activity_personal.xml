@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.userData.first.paisa_PersonalActivityPaisa">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_common" />
+
+    <com.paisa.four_u.ui.view.paisa_ProgressView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:page="first" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewShow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tv_text="@string/paisa_basic_information" />
+
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewInput
+                android:id="@+id/ivi_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:input_is_number="false"
+                app:input_title_text="@string/paisa_first_name" />
+
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewInput
+                android:id="@+id/ivi_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:input_is_number="false"
+                app:input_title_text="@string/paisa_last_name" />
+
+
+            <!--            <com.paisa.four_u.ui.view.item.ItemViewInput-->
+            <!--                android:id="@+id/ivi_id"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:input_is_number="false"-->
+            <!--                app:input_title_text="@string/id" />-->
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewRadio
+                android:id="@+id/ivr_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+<!--            <com.paisa.four_u.ui.view.item.ItemViewInput-->
+<!--                android:id="@+id/ivi_age"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:input_is_number="true"-->
+<!--                app:input_title_text="@string/age" />-->
+
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewShow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:tv_text="@string/paisa_additional_info_with_quota" />
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewSelect
+                android:id="@+id/ivs_education"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/paisa_education" />
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewSelect
+                android:id="@+id/ivs_wor_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/paisa_wor_type" />
+
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewInput
+                android:id="@+id/ivi_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:input_is_number="false"
+                app:input_title_text="@string/paisa_email" />
+
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewInput
+                android:id="@+id/ivi_facebook_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:input_is_number="false"
+                app:input_title_text="@string/paisa_facebook_email" />
+
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewShow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:tv_text="@string/paisa_upload_cnic" />
+
+
+            <TextView
+                android:id="@+id/tv_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paisa_PictureLoadModal_first_title_2"
+                android:textColor="@color/red_ff" />
+
+            <ImageView
+                android:id="@+id/iv_idcard_front"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/paisa_img_upload_img" />
+
+
+            <ImageView
+                android:id="@+id/iv_idcard_back"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/paisa_img_upload_back" />
+
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewInput
+                android:id="@+id/ivi_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:input_is_number="false"
+                android:layout_marginTop="10dp"
+                app:input_title_text="@string/paisa_cnic_number" />
+
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewSelect
+                android:id="@+id/ivs_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:title_text="@string/paisa_date_of_birthl" />
+
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewSelect
+                android:id="@+id/ivs_issue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:title_text="@string/paisa_date_of_issue" />
+
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewSelect
+                android:id="@+id/ivs_forever_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text="@string/paisa_current_province" />
+
+
+            <com.paisa.four_u.ui.view.item.paisa_ItemViewInput
+                android:id="@+id/ivi_full_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:input_is_number="false"
+                app:input_title_text="@string/paisa_current_address" />
+
+
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="80dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/paisa_next"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
