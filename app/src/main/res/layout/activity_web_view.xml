@@ -51,7 +51,7 @@
             android:gravity="center"
             android:text="@string/paisa_ok"
             android:enabled="false"
-            android:textColor="@color/black"
+            android:textColor="@color/colorPrimaryVariant"
             android:textSize="18sp"
             android:textStyle="bold" />
 
