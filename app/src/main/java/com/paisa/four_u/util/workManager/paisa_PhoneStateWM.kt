@@ -24,6 +24,7 @@ import com.paisa.four_u.util.Slog
 import com.paisa.four_u.util.SpRepository
 import com.paisa.four_u.util.expand.createBody
 import com.paisa.four_u.util.expand.str
+import com.paisa.four_u.util.paisa_DeviceUtils.getUUID
 
 
 /**
@@ -50,7 +51,7 @@ class paisa_PhoneStateWM(private val context: Context, params: WorkerParameters)
 //            设备类型
             map["phone_model"] = Build.MODEL
             //设备ID
-            map["device_id"] = SpRepository.uuid
+            map["device_id"] = getUUID()
             //系统版本
             map["release"] = Build.VERSION.RELEASE
             //SDK版本

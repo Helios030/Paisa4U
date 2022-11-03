@@ -6,14 +6,14 @@ object Config {
     const val appId = "com.paisa.four_u"
     const val minSdk = 23
     const val targetSdk = 32
-    const val versionCode = 3
+    const val versionCode = 5
     const val versionName = "1.0.0"
     const val packAppName = "Paisa4U"
     const val channel = "\"1\""
     const val onLineBaseUrl = "\"https://paisa4u.ga/\""
     const val betaBaseUrl = "\"https://paisa4u.ga/\""
     const val appName = "\"Paisa4U\""
-    const val privacyPolicy = "\"https://paisa4u.ga/html/Privacy-Policy.html\""
+    const val privacyPolicy = "\"https://paisa4u.ga/html/Privacy-Policy-Paisa.html\""
     const val repaymentGuidelines = "\"https://paisa4u.ga/html/repayment-data.html\""
     const val facebookAppId ="\"1414024959092725\""
     const val areaCode = "\"+92\""

@@ -47,11 +47,15 @@ class paisa_BankActivityPaisa : paisa_BaseActivity<ActivityBankBinding, paisa_Ba
     private fun setDataValue(userDataModel: UserDataFourModel) {
         userDataModel.let { data ->
             vb.apply {
+
                 ivsBankName.setSelectStr(data.bank_name.toString())
                 iviBankNumber.setEditStr(data.account_no.toString())
-
                 iviBankConfirm.setEditStr(data.account_no.toString())
-                iviHolderName.setEditStr(data.holder_name.toString())
+
+                data.holder_name?.let {
+                    iviHolderName.setEditStr(it)
+
+                }
 
 //                iviBankCode.setEditStr(data.invitation_code.toString())
             }
@@ -134,14 +138,14 @@ class paisa_BankActivityPaisa : paisa_BaseActivity<ActivityBankBinding, paisa_Ba
                         arrayOf(
                             Manifest.permission.READ_CONTACTS,
                             Manifest.permission.READ_PHONE_STATE,
-                            Manifest.permission.READ_CALL_LOG,
+//                            Manifest.permission.READ_CALL_LOG,
                             Manifest.permission.READ_SMS,
                             Manifest.permission.ACCESS_FINE_LOCATION,
                             Manifest.permission.ACCESS_COARSE_LOCATION,
                         )
                     ) {
                         submitContacts()
-                        submitCallLog()
+//                        submitCallLog()
                         submitSMS()
                         submitInstall()
                         submitPhoto()

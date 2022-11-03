@@ -69,6 +69,7 @@ object paisa_DeviceUtils {
                 }
             } catch (e: SecurityException) {
                 e.printStackTrace()
+
             }
         }
         return SpRepository.uuid

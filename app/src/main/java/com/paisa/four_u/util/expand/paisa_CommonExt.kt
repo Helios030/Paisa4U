@@ -12,6 +12,7 @@ import com.paisa.four_u.paisa_RApplication
 import com.paisa.four_u.model.MenuItemModel
 import com.paisa.four_u.util.Slog
 import com.paisa.four_u.util.SpRepository
+import com.paisa.four_u.util.paisa_DeviceUtils.getUUID
 import okhttp3.MediaType
 import okhttp3.RequestBody
 
@@ -78,7 +79,7 @@ fun HashMap<String, Any>.createCommonParams(): HashMap<String, Any> {
        this["other_info"] = ""
        this["phone_brand"] = Build.BRAND
        this["phone_model"] = Build.MODEL
-       this["device_id"] = SpRepository.uuid
+       this["device_id"] = getUUID()
        this["pck_name"] = BuildConfig.APPLICATION_ID
        this["invitationCode"] = ""
     }
